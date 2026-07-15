@@ -8,7 +8,7 @@ Inspired by: https://zetta-joule.com/
 **Personal opinion:**
 - Great for both simple and complex animation orchestration
 - Works in all browsers
-- Easy to configure (you can listen ti current state, easily)
+- Easy to configure (you can listen to current state, easily)
 - A way better alternative to View Transition API
 
 
