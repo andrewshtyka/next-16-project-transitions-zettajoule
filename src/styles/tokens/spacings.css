@@ -1,0 +1,39 @@
+:root {
+  /* ================================================== */
+  /* */
+  /* Spacings */
+  --space-0: 0px;
+  --space-px: 1px;
+  --space-1: 2px;
+  --space-2: 4px;
+  --space-3: 6px;
+  --space-4: 8px;
+  --space-5: 10px;
+  --space-6: 12px;
+  --space-7: 14px;
+  --space-8: 16px;
+  --space-9: 18px;
+  --space-10: 20px;
+  --space-11: 24px;
+  --space-12: 32px;
+  --space-13: 40px;
+  --space-14: 48px;
+  --space-15: 56px;
+  --space-16: 64px;
+  --space-17: 80px;
+  --space-18: 96px;
+  --space-19: 128px;
+  --space-20: 256px;
+  --space-21: 512px;
+
+  /* ================================================== */
+  /* */
+  /* Border radius */
+  --radius-100: var(--space-2);
+  --radius-200: var(--space-4);
+
+  /* ================================================== */
+  /* */
+  /* Gaps */
+  --gap-primary: var(--space-10);
+}

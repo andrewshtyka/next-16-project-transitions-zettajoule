@@ -1,0 +1,35 @@
+.header {
+	position: fixed;
+	top: var(--space-11);
+	left: var(--space-12);
+	width: calc(100% - var(--space-12) * 2);
+
+	color: var(--color-text-light);
+	mix-blend-mode: difference;
+}
+
+.list {
+	display: flex;
+	column-gap: 2em;
+}
+
+.is_active {
+	position: relative;
+	--thickness: var(--space-px);
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: -0.2em;
+		left: 0;
+		width: 100%;
+		height: var(--thickness);
+		background-color: var(--color-bg-light);
+	}
+}
+
+@media (width >= 768px) {
+	.is_active {
+		--thickness: var(--space-1);
+	}
+}

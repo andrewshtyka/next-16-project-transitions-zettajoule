@@ -1,0 +1,31 @@
+:root {
+  /* monochrome */
+  --hue: 224;
+  --color-gray-0: hsl(var(--hue), 5%, 4%);
+  --color-gray-100: hsl(var(--hue), 5%, 10%);
+  --color-gray-200: hsl(var(--hue), 5%, 20%);
+  --color-light: hsl(var(--hue), 0%, 100%);
+
+  /* accent */
+  --color-blue-0: hsl(var(--hue), 76%, 48%);
+  --color-blue-100: hsl(var(--hue), 84%, 43%);
+
+  /* ================================================== */
+  /* */
+  /* Background */
+  --color-bg-light: var(--color-light);
+  --color-bg-dark: var(--color-gray-0);
+  --color-bg-blue: var(--color-blue-0);
+
+  /* ================================================== */
+  /* */
+  /* Buttons */
+  --color-button-primary: var(--color-blue-0);
+  --color-button-secondary: var(--color-light);
+
+  /* ================================================== */
+  /* */
+  /* Text */
+  --color-text-dark: var(--color-gray-0);
+  --color-text-light: var(--color-light);
+}

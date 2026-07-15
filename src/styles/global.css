@@ -1,0 +1,72 @@
+/* ================================================== */
+/* */
+/* BASE */
+
+html.custom_scroll::-webkit-scrollbar {
+	width: 15px;
+}
+
+body {
+	min-height: 100dvh;
+	overflow-x: hidden;
+	padding-block-start: var(--space-16);
+
+	background-color: var(--color-bg-light);
+	color: var(--color-text-dark);
+}
+
+@media (width >= 1200px) {
+	body {
+		padding-block-start: var(--space-18);
+	}
+}
+
+/* ================================================== */
+/* */
+/* APPEARANCE */
+::selection {
+}
+
+.container_images {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	row-gap: 2rem;
+
+	justify-self: flex-end;
+
+	padding-block-start: var(--space-19);
+}
+
+@media (width >= 768px) {
+	.container_images {
+		width: 75%;
+	}
+}
+
+.img {
+	display: inline-flex;
+	width: 100%;
+	height: 100%;
+}
+
+/* ================================================== */
+/* */
+/* Transition */
+
+.transition_grid {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	overflow: hidden;
+	z-index: 100;
+}
+
+.transition_block {
+	position: absolute;
+	background-color: #ffcb9d;
+	will-change: transform;
+}
