@@ -34,8 +34,8 @@ npm run dev
 1. Click on <Link /> leads to the new page.
 2. Scroll is blocked when navigation started. Unlocks after animation of transition is finished.
 3. Works in all browsers.
-4. Reveal animation works for page browser "Back" and "Forward" buttons.
+4. Reveal animation works OK (when you click on browser "Back" and "Forward" buttons).
 
 ### ⚠️ Nuances:
-**By default, browser "Back" and "Forward" buttons don't trigger animation intentionally.** \
-Such a behavior provides the UX people expect from websites. Although the creator of Next Transition Router [says](https://github.com/ismamz/next-transition-router/issues/2) it's still possible to implement, but highly NOT recommended.
+**By default, browser "Back" and "Forward" buttons don't trigger animation.** \
+For a reason. Such behavior provides the UX people expect from websites. Although the creator of Next Transition Router [says](https://github.com/ismamz/next-transition-router/issues/2) it's still possible to implement, but highly NOT recommended.
