@@ -2,10 +2,6 @@
 /* */
 /* BASE */
 
-html.custom_scroll::-webkit-scrollbar {
-	width: 15px;
-}
-
 body {
 	min-height: 100dvh;
 	overflow-x: hidden;
@@ -33,8 +29,7 @@ body {
 	width: 100%;
 	row-gap: 2rem;
 
-	justify-self: flex-end;
-
+	margin-inline-start: auto;
 	padding-block-start: var(--space-19);
 }
 
