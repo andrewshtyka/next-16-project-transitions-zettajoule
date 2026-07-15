@@ -82,12 +82,7 @@ export default function usePageTransition(transitionGridRef) {
 
 	function animateIn(callback) {
 		isTransitioningRef.current = true;
-		const tl = gsap.timeline({
-			onComplete: () => {
-				isTransitioningRef.current = false;
-				callback();
-			},
-		});
+		const tl = gsap.timeline({ onComplete: callback });
 
 		range(ROWS).forEach((row) => {
 			const blocks = getRowBlocks(row);
@@ -111,11 +106,15 @@ export default function usePageTransition(transitionGridRef) {
 	}
 
 	function animateOut(callback = "") {
-		const tl = gsap.timeline({ onComplete: callback });
+		const tl = gsap.timeline({
+			onComplete: () => {
+				isTransitioningRef.current = false;
+				callback();
+			},
+		});
 
 		range(ROWS).forEach((row) => {
 			const blocks = getRowBlocks(row);
-			console.log(blocks);
 
 			tl.fromTo(
 				blocks,
