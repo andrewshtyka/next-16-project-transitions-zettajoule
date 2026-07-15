@@ -31,7 +31,7 @@ npm run dev
 ---
 
 ### ✅ Done:
-1. Click on <Link /> leads to the new page.
+1. Click on \<Link /> leads to the new page.
 2. Scroll is blocked when navigation started. Unlocks after animation of transition is finished.
 3. Works in all browsers.
 4. Reveal animation works OK (when you click on browser "Back" and "Forward" buttons).
