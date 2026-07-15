@@ -30,10 +30,6 @@ import { useTransitionState } from "next-transition-router";
 // #endregion ===========================
 
 export default function HomePage() {
-	// const { stage, isReady } = useTransitionState();
-	// console.log("stage:", stage); // none, leaving, entering
-	// console.log("isReady:", isReady); // false, true
-
 	const [images, setImages] = React.useState(imagesHome);
 
 	React.useEffect(() => {

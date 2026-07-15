@@ -37,9 +37,11 @@ const STAGGER_OUT_SEC = 0.03;
 
 export default function usePageTransition(transitionGridRef) {
 	const blocksArrayRef = React.useRef([]);
+	const isTransitioningRef = React.useRef(false);
 
 	function createTransitionGrid() {
 		if (!transitionGridRef.current) return;
+		if (isTransitioningRef.current) return;
 
 		const container = transitionGridRef.current;
 		container.innerHTML = "";
@@ -79,7 +81,13 @@ export default function usePageTransition(transitionGridRef) {
 	}
 
 	function animateIn(callback) {
-		const tl = gsap.timeline({ onComplete: callback });
+		isTransitioningRef.current = true;
+		const tl = gsap.timeline({
+			onComplete: () => {
+				isTransitioningRef.current = false;
+				callback();
+			},
+		});
 
 		range(ROWS).forEach((row) => {
 			const blocks = getRowBlocks(row);
@@ -107,6 +115,7 @@ export default function usePageTransition(transitionGridRef) {
 
 		range(ROWS).forEach((row) => {
 			const blocks = getRowBlocks(row);
+			console.log(blocks);
 
 			tl.fromTo(
 				blocks,
