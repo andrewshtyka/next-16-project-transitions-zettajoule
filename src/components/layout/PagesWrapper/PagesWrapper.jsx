@@ -30,18 +30,22 @@ export default function PagesWrapper({ children }) {
 	const ref = React.useRef(null);
 
 	// block scroll during transition
-	React.useEffect(() => {
+	React.useLayoutEffect(() => {
 		if (!ref.current || !window || !document) return;
 
 		let appliedOverflow;
+		let appliedWidth;
 
 		if (stage === "none" && isReady) {
 			appliedOverflow = "visible";
+			appliedWidth = "100%";
 		} else {
 			appliedOverflow = "hidden";
+			appliedWidth = `${window.innerWidth - 15}px`;
 		}
 
 		document.body.style.overflow = appliedOverflow;
+		ref.current.style.width = appliedWidth;
 	}, [isReady, stage]);
 
 	return (
