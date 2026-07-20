@@ -22,8 +22,10 @@ import css from "./PagesWrapper.module.css";
 // utility
 import React from "react";
 import { useTransitionState } from "next-transition-router";
+import { getScrollbarWidth } from "@/utils/getScrollbarWidth";
 
 // #endregion ===========================
+
 
 export default function PagesWrapper({ children }) {
 	const { stage, isReady } = useTransitionState();
@@ -41,7 +43,7 @@ export default function PagesWrapper({ children }) {
 			appliedWidth = "100%";
 		} else {
 			appliedOverflow = "hidden";
-			appliedWidth = `${window.innerWidth - 15}px`;
+			appliedWidth = `${window.innerWidth - getScrollbarWidth()}px`;
 		}
 
 		document.body.style.overflow = appliedOverflow;
